@@ -3,6 +3,10 @@ require "sinatra/reloader" if development?
 
 enable :sessions
 
+get '/' do
+  "welcome to my website"
+end
+
 get '/wechat/incoming' do
     signature = params['signature'] || ''
     timestamp = params['timestamp'] || ''
